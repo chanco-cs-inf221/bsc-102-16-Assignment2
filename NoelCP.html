@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)file:///C:/Users/NOEL/Desktop/NoelCP.html?day=2019-03-29#academic%20background -->
+<html style="
+    background-color: #444040;">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="file:///C:/Users/NOEL/Desktop/w3.css">        
+                
+                
+                   
+                <title> Noel Chikuse Phiri    </title>
+                <style type="text/css"> 
+                body #container {background-color: rgb(99, 99, 112);
+                color: white;
+                }
+                body #done { background-color: rgb(175, 164, 164);}
+                  header { 
+                     border: 2px solid black;
+                     margin: 20px;
+                     background-color: rgb(169, 168, 172);
+                  }
+                  header ul {
+                      list-style-type: none
+                  }
+                header ul{
+                    text-align:center;
+                    display: inline; 
+                }
+                 header ul li{
+                        text-align: center;}
+                    
+                h1 {
+                    text-align: center}
+                img { margin-left: 300px;
+                 }
+                 header a{ text-decoration: none;
+                 font-size: 20px;
+                 color:black;
+                 display: inline;
+                 text-align: center;
+                
+                }
+                header a:hover{
+                    color:brown;
+                }
+                header a:active{
+                    color:rgb(110, 109, 108);
+                }
+                input type-submit:checked{
+                    color: brown;
+                }
+                
+                
+                .done{
+                    border: 1PX solid black;
+                    text-align: center;
+                    width: 250px;
+                    margin: 30px;
+                    float: left;  
+                 }
+                
+                   #projects{
+                       text-align: center;
+                       font-size: 18px;
+                    
+                   }
+                   #projects p{color:white;}
+                   #container{
+                       border: 2px solid black;
+                       float: left;
+                       width: 85%;
+                       margin-left: 75px;
+                   }
+                   h3 {color: rgb(38, 38, 180)}
+                   h2 {color: rgb(38, 38, 180) }
+                   h4 {color: rgb(38, 38, 180)}
+                   fieldset{
+                       margin-bottom: 20px;
+                   }
+                </style>
+                </head>
+                <body>
+                    <header>
+                        <h1> Noel C Phiri- Chanco student  </h1>
+                        <img src="file:///C:/Users/NOEL/Desktop/Image.jpg" width="150" height="150"> 
+                        <ul>
+                            <li><a href="file:///C:/Users/NOEL/Desktop/NoelCP.html?day=2019-03-29#academic%20background"> Academics. </a></li>
+                            <li> <a href="file:///C:/Users/NOEL/Desktop/www.noelnoelz.home.blog"> My blog. </a> </li>
+                            <li>  <a href="file:///C:/Users/NOEL/Desktop/GitHub"> GitHub.</a></li>
+                        </ul>   
+                    </header>
+                <div id="container"> 
+                    <div id="projects">
+                            <h1>PROJECTS</h1>
+                            <div class="done"> 
+                                    <h2> The African Quill</h2> 
+                                    <p>This was done in Nigeria with the financial help of the AU</p>
+                                    <p>It was presided over by Chinua Achebe</p>
+                                    <p>It lasted for 7 days</p>
+                                    <p>I was at the end recognised as Africas best upcoming poet</p>
+                            </div>
+                                <div class="done">    <h3>The ICT and Upcoming Poets Association</h3>
+                                    <p> This project was done in the UK</p>
+                                    <p> It focused on creating a strong relationship between programmers and upcoming poets </p>
+                                    <p> Programmers were urged to build apps that would help the poets have their work known across the globe</p>
+                                </div>
+                                <div class="done">    
+                                    <h4>The My Fingertips Project</h4>
+                                    <p>This involved enhancing computer literacy levels in Malawian secondary schools</p>
+                                    <p>It was done in 4 secondary schools</p>
+                                    <p>Students had both their theoretical and practical knowledge of computers enhanced</p>
+                                </div>    
+                    </div>
+                    <div class="done"><h3>Enter Project Details</h3>
+                    <form action="file:///C:/Users/NOEL/Desktop/NoelCP.html?day=2019-03-29" method="post">
+                        <label for="inpKey">Project name:</label>
+                        <input type="text" id="inpKey"> <br> <br>
+                        <label for="inpValue"> Project description:</label>
+                        <input type="text" id="inpValue"> <br> <br>
+                        Enter day of completion:
+                        <input type="date" id="date" name="date"> <br> <br>
+                        <input type="submit" id="submit" value="Submit">
+                
+                    </form>
+                    <fieldset>
+                    <legend>local Storage</legend>
+                    <div id="IsOutput"></div>
+                    </fieldset>
+                
+                </div>
+                
+
+                <script>
+                    console.log(localStorage);
+                const inpKey = document.getElementById("inpKey");
+                const inpValue = document.getElementById("inpValue");
+                const date = document.getElementById("date");
+                const submit = document.getElementById("submit");
+                const IsOutput = document.getElementById("IsOutput");
+                
+                submit.onclick= function() {
+                    const key= inpKey.value;
+                    const value= inpValue.value;
+
+        
+                
+                    if (key && value){
+                        localStorage.setItem(key, value),
+                        location.reload();
+                    }
+                };
+                
+                for ( let i=0; i> localStorage.length; i++){
+                    const key= localStorage.key(i);
+                    const value= localStorage.getItem(key);
+
+                    IsOutput.innerHTML+='${key}: ${value}<br />';
+                 
+                }
+
+            
+                </script>
+                
+                
+       </div>
+       </body>
+       </html>
+       
